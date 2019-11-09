@@ -41,6 +41,7 @@ export class Header extends React.Component<Props, State> {
 
 const Wrapper = styled.header`
   @import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
+
   font-family: 'Hind', sans-serif;
   font-weight: bold;
   letter-spacing: 2px;

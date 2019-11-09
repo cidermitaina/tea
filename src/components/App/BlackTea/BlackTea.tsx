@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Layout } from '../../Layout'
+import { Heading } from '../../shared/Heading'
+import { space } from '../../../themes/size'
 
 import fortnumandmason from '../../../images/fortnumandmason.jpg'
 import mariagefreres from '../../../images/mariagefreres.jpg'
@@ -13,11 +15,13 @@ export const BlackTea: React.FC<{}> = () => {
   return (
     <Layout>
       <MainVisual>
-        <h1>Black Tea</h1>
+        <Heading className="sectionTitle">Black Tea</Heading>
       </MainVisual>
       <MainContents>
         <TeaContents>
-          <Title>Tea List</Title>
+          <Heading tag="h2" className="blockTitle">
+            Tea List
+          </Heading>
           <List>
             <li>
               <div>
@@ -56,23 +60,12 @@ export const BlackTea: React.FC<{}> = () => {
   )
 }
 
-const Title = styled.h2`
-  @import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
-  font-family: 'Hind', sans-serif;
-  letter-spacing: 2px;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: left;
-`
-
 const TeaContents = styled.div`
   width: 85%;
-  margin: 48px auto 0;
+  margin: ${space.xl} auto 0;
 `
 
 const MainVisual = styled.div`
-  @import 'https://fonts.googleapis.com/css?family=Hind&display=swap';
-  font-family: 'Hind', sans-serif;
   width: 50%;
   text-align: center;
   background-color: darksalmon;
@@ -81,11 +74,6 @@ const MainVisual = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  h1 {
-    font-weight: bold;
-    font-size: 2rem;
-    letter-spacing: 5px;
-  }
 `
 
 const MainContents = styled.section`
@@ -97,10 +85,11 @@ const MainContents = styled.section`
 
 const List = styled.ul`
   @import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
+
   font-family: 'Hind', sans-serif;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 48px;
+  padding-top: ${space.xl};
   li {
     width: 50%;
     padding: 16px;

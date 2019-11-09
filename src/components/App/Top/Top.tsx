@@ -2,6 +2,8 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 import { Layout } from '../../Layout'
+import { Heading } from '../../shared/Heading'
+import { space } from '../../../themes/size'
 import mv from '../../../images/ReadingSideDoodle.svg'
 
 export const Top: React.FC<{}> = () => {
@@ -12,7 +14,7 @@ export const Top: React.FC<{}> = () => {
       </MainVisual>
       <MainContents>
         <Contents>
-          <h1>お茶の時間にしませんか</h1>
+          <Heading className="headTitle">お茶の時間にしませんか</Heading>
           <p>
             お気に入りの日本茶、紅茶、中国茶を集めました。
             <br />
@@ -47,12 +49,11 @@ const Contents = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
   height: 100%;
   flex-direction: column;
   p {
     font-size: 1rem;
-    padding-top: 32px;
+    padding-top: ${space.m};
     line-height: 1.4;
   }
 `
