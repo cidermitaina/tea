@@ -3,14 +3,14 @@ import styled from 'styled-components'
 
 import { font } from '../../../themes/size'
 
-interface Props {
-  children: string
+export interface HeadingProps {
+  children: React.ReactNode
   type?: 'screenTitle' | 'sectionTitle' | 'blockTitle' | 'subBlockJaTitle' | 'subBlockTitle'
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
   className?: string
 }
 
-export const Heading: React.FC<Props> = ({ tag = 'h1', type = 'ScreenTitle', className = '', children }) => {
+export const Heading: React.FC<HeadingProps> = ({ tag = 'h1', type = 'ScreenTitle', className = '', children }) => {
   return (
     <Wrapper as={tag} className={`${type} ${className}`}>
       {children}

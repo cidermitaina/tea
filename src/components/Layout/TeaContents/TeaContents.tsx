@@ -1,0 +1,37 @@
+import React from 'react'
+import styled from 'styled-components'
+
+import { Tea } from '../../../types/application'
+import { List } from '../../shared/List'
+import { Heading } from '../../shared/Heading'
+import { space } from '../../../themes/size'
+
+interface Props {
+  teas: Tea[]
+  lang?: string
+}
+
+export const TeaContents: React.FC<Props> = ({ teas, lang }) => {
+  return (
+    <Wrapper>
+      <Contents>
+        <Heading tag="h2" className="blockTitle">
+          Tea List
+        </Heading>
+        <List teas={teas} lang={lang} />
+      </Contents>
+    </Wrapper>
+  )
+}
+
+const Wrapper = styled.div`
+  width: 50%;
+  height: 100%;
+  background-color: #f5efe0;
+  overflow-y: scroll;
+`
+
+const Contents = styled.div`
+  width: 85%;
+  margin: ${space.xl} auto 0;
+`
