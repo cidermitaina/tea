@@ -6,6 +6,7 @@ import { Redirect, Route, Switch } from 'react-router'
 import { Top } from './components/App/Top'
 import { GreenTea } from './components/App/GreenTea'
 import { BlackTea } from './components/App/BlackTea'
+import { TeaCup } from './components/App/TeaCup'
 
 import './App.css'
 
@@ -17,6 +18,7 @@ const App: React.FC<{}> = () => (
       <Route exact path="/" component={Top} />
       <Route path="/GreenTea" component={GreenTea} />
       <Route path="/BlackTea" component={BlackTea} />
+      <Route path="/TeaCup" component={TeaCup} />
       <Redirect to="/" />;
     </Switch>
   </>
