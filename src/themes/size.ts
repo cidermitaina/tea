@@ -11,8 +11,9 @@ export const space = {
 }
 
 export const font = {
-  xs: '1.1rem',
-  s: '1.4rem',
+  xxs: '1.1rem',
+  xs: '1.4rem',
+  s: '1.6rem',
   m: '1.8rem',
   l: '2.4rem',
   xl: '3.2rem',

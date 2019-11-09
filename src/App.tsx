@@ -22,10 +22,11 @@ const App: React.FC<{}> = () => (
   </>
 )
 
-const GlobalStyle = createGlobalStyle`@import url("https://fonts.googleapis.com/css?family=Sawarabi+Gothic|Sawarabi+Mincho&display=swap");
+const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
   html {
     height: 100%;
-    font-family: 'Sawarabi Mincho', sans-serif;
+    font-family: 'Hind', sans-serif;
     font-size: 62.5%;
     color: #333;
   }

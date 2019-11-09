@@ -25,23 +25,22 @@ const Wrapper = styled.h1`
   &.headTitle {
     font-size: ${font.xl};
     font-weight: normal;
+    font-family: 'Sawarabi Mincho', sans-serif;
   }
   &.sectionTitle {
-    font-family: 'Hind', sans-serif;
     font-size: ${font.xl};
     letter-spacing: 5px;
   }
   &.blockTitle {
-    font-family: 'Hind', sans-serif;
     font-size: ${font.l};
     letter-spacing: 2px;
   }
   &.subBlockJaTitle {
     font-size: ${font.m};
+    font-family: 'Sawarabi Mincho', sans-serif;
     letter-spacing: 2px;
   }
   &.subBlockTitle {
-    font-family: 'Hind', sans-serif;
     font-size: ${font.m};
     letter-spacing: 2px;
   }

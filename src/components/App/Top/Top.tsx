@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import { Layout } from '../../Layout'
 import { Heading } from '../../shared/Heading'
+import { Text } from '../../shared/Text'
 import { space } from '../../../themes/size'
 import mv from '../../../images/ReadingSideDoodle.svg'
 
@@ -15,11 +16,11 @@ export const Top: React.FC<{}> = () => {
       <MainContents>
         <Contents>
           <Heading className="headTitle">お茶の時間にしませんか</Heading>
-          <p>
+          <HeadingText lang="ja" size="s">
             お気に入りの日本茶、紅茶、中国茶を集めました。
             <br />
             お茶の時間にしませんか
-          </p>
+          </HeadingText>
         </Contents>
       </MainContents>
     </Layout>
@@ -51,9 +52,8 @@ const Contents = styled.section`
   justify-content: center;
   height: 100%;
   flex-direction: column;
-  p {
-    font-size: 1rem;
-    padding-top: ${space.m};
-    line-height: 1.4;
-  }
+`
+
+const HeadingText = styled(Text)`
+  padding-top: ${space.m};
 `
