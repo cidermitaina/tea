@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 import { Header } from './Header'
 
@@ -8,22 +8,17 @@ interface Props {
   color?: string
 }
 
-export const Layout: React.FC<Props> = ({
-  children,
-  color
-}) => {
+export const Layout: React.FC<Props> = ({ children }) => {
   const links = [
     { name: 'about', url: '/about' },
     { name: 'Black Tea', url: '/blacktea' },
     { name: 'Green Tea', url: '/greentea' },
     { name: 'Cafe', url: '/cafe' },
-  ];
+  ]
 
   return (
     <Wrapper>
-      <Header
-        links={links}
-      />
+      <Header links={links} />
       <Main>{children}</Main>
       <Footer></Footer>
     </Wrapper>
@@ -41,6 +36,4 @@ const Main = styled.main`
   z-index: 0;
 `
 
-const Footer = styled.footer`
-
-`
+const Footer = styled.footer``

@@ -1,27 +1,24 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 import { Hamburger } from './Hamburger'
 
 interface Link {
-  name: string,
-  url: string,
+  name: string
+  url: string
 }
 
 interface Props {
   links: Link[]
 }
 
-export interface State {
-}
+export interface State {}
 
 export class Header extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
 
-    this.state = {
-
-    }
+    this.state = {}
   }
   public render() {
     const { links } = this.props
@@ -30,17 +27,20 @@ export class Header extends React.Component<Props, State> {
         <nav>
           <Hamburger />
           <NavList>
-            {links.map((link) => (
-              <li><a href={link.url}>{link.name}</a></li>
+            {links.map(link => (
+              <li>
+                <a href={link.url}>{link.name}</a>
+              </li>
             ))}
           </NavList>
         </nav>
       </Wrapper>
-    );
+    )
   }
 }
 
-const Wrapper = styled.header`@import url("https://fonts.googleapis.com/css?family=Hind&display=swap");
+const Wrapper = styled.header`
+  @import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
   font-family: 'Hind', sans-serif;
   font-weight: bold;
   letter-spacing: 2px;
@@ -57,10 +57,10 @@ const NavList = styled.ul`
   display: none;
 
   & > li {
-    padding:0 8px;
+    padding: 0 8px;
     margin-top: 16px;
   }
   & a {
     color: #333;
   }
-`;
+`

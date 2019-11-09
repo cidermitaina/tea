@@ -1,27 +1,23 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
 
 import { Layout } from '../../Layout'
 
-import fortnumandmason from '../../../images/fortnumandmason.jpg';
-import mariagefreres from '../../../images/mariagefreres.jpg';
-import buntingtee from '../../../images/buntingtee.jpg';
-import suki from '../../../images/suki.jpg';
-import navarasa from '../../../images/navarasa.jpg';
+import fortnumandmason from '../../../images/fortnumandmason.jpg'
+import mariagefreres from '../../../images/mariagefreres.jpg'
+import buntingtee from '../../../images/buntingtee.jpg'
+import suki from '../../../images/suki.jpg'
+import navarasa from '../../../images/navarasa.jpg'
 
 export const BlackTea: React.FC<{}> = () => {
   return (
     <Layout>
       <MainVisual>
-        <h1>
-          Black Tea
-        </h1>
+        <h1>Black Tea</h1>
       </MainVisual>
       <MainContents>
         <TeaContents>
-          <Title>
-            Tea List
-          </Title>
+          <Title>Tea List</Title>
           <List>
             <li>
               <div>
@@ -60,7 +56,8 @@ export const BlackTea: React.FC<{}> = () => {
   )
 }
 
-const Title = styled.h2`@import url("https://fonts.googleapis.com/css?family=Hind&display=swap");
+const Title = styled.h2`
+  @import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
   font-family: 'Hind', sans-serif;
   letter-spacing: 2px;
   font-size: 24px;
@@ -73,13 +70,14 @@ const TeaContents = styled.div`
   margin: 48px auto 0;
 `
 
-const MainVisual = styled.div`@import url("https://fonts.googleapis.com/css?family=Hind&display=swap");
+const MainVisual = styled.div`
+  @import 'https://fonts.googleapis.com/css?family=Hind&display=swap';
   font-family: 'Hind', sans-serif;
   width: 50%;
   text-align: center;
   background-color: darksalmon;
   height: 100%;
-  color: #FFF;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,7 +86,6 @@ const MainVisual = styled.div`@import url("https://fonts.googleapis.com/css?fami
     font-size: 2rem;
     letter-spacing: 5px;
   }
-
 `
 
 const MainContents = styled.section`
@@ -98,7 +95,8 @@ const MainContents = styled.section`
   overflow-y: scroll;
 `
 
-const List = styled.ul`@import url("https://fonts.googleapis.com/css?family=Hind&display=swap");
+const List = styled.ul`
+  @import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
   font-family: 'Hind', sans-serif;
   display: flex;
   flex-wrap: wrap;
@@ -119,5 +117,3 @@ const List = styled.ul`@import url("https://fonts.googleapis.com/css?family=Hind
     text-align: left;
   }
 `
-
-

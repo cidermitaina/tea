@@ -1,24 +1,20 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
 
 import { Layout } from '../../Layout'
 
-import okumidori from '../../../images/aokumidori.jpg';
-import uchinochaho from '../../../images/uchinochaho.jpg';
+import okumidori from '../../../images/aokumidori.jpg'
+import uchinochaho from '../../../images/uchinochaho.jpg'
 
 export const GreenTea: React.FC<{}> = () => {
   return (
     <Layout>
       <MainVisual>
-        <h1>
-          Japanese tea
-        </h1>
+        <h1>Japanese tea</h1>
       </MainVisual>
       <MainContents>
         <TeaContents>
-          <Title>
-            Tea List
-          </Title>
+          <Title>Tea List</Title>
           <List>
             <li>
               <div>
@@ -39,7 +35,8 @@ export const GreenTea: React.FC<{}> = () => {
   )
 }
 
-const Title = styled.h2`@import url("https://fonts.googleapis.com/css?family=Hind&display=swap");
+const Title = styled.h2`
+  @import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
   font-family: 'Hind', sans-serif;
   letter-spacing: 2px;
   font-size: 24px;
@@ -52,13 +49,14 @@ const TeaContents = styled.div`
   margin: 48px auto 0;
 `
 
-const MainVisual = styled.div`@import url("https://fonts.googleapis.com/css?family=Hind&display=swap");
+const MainVisual = styled.div`
+  @import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
   font-family: 'Hind', sans-serif;
   width: 50%;
   text-align: center;
   background-color: darkseagreen;
   height: 100%;
-  color: #FFF;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,7 +65,6 @@ const MainVisual = styled.div`@import url("https://fonts.googleapis.com/css?fami
     font-size: 2rem;
     letter-spacing: 5px;
   }
-
 `
 
 const MainContents = styled.section`
@@ -77,7 +74,8 @@ const MainContents = styled.section`
   overflow-y: scroll;
 `
 
-const List = styled.ul`@import url("https://fonts.googleapis.com/css?family=Hind&display=swap");
+const List = styled.ul`
+  @import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
   display: flex;
   flex-wrap: wrap;
   padding-top: 48px;

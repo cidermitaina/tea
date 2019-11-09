@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 import { Layout } from '../../Layout'
-import mv from '../../../images/ReadingSideDoodle.svg';
+import mv from '../../../images/ReadingSideDoodle.svg'
 
 export const Top: React.FC<{}> = () => {
   return (
@@ -12,11 +12,10 @@ export const Top: React.FC<{}> = () => {
       </MainVisual>
       <MainContents>
         <Contents>
-          <h1>
-            お茶の時間にしませんか
-          </h1>
+          <h1>お茶の時間にしませんか</h1>
           <p>
-            お気に入りの日本茶、紅茶、中国茶を集めました。<br />
+            お気に入りの日本茶、紅茶、中国茶を集めました。
+            <br />
             お茶の時間にしませんか
           </p>
         </Contents>
@@ -38,7 +37,7 @@ const MainVisual = styled.div`
 const MainContents = styled.section`
   width: 50%;
   height: 100%;
-  color: #FFF;
+  color: #fff;
   background-color: lightseagreen;
   background-color: tan;
   position: relative;

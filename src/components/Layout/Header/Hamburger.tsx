@@ -1,11 +1,9 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Hamburger: React.FC<{}> = () => {
   return (
-    <MenuIcon
-      className="burger burger-squeeze"
-    >
+    <MenuIcon className="burger burger-squeeze">
       <Lines className="burger-lines"></Lines>
     </MenuIcon>
   )
@@ -17,7 +15,7 @@ const MenuIcon = styled.div`
   position: relative;
   font-size: 12px;
   cursor: pointer;
-  transition: .2s all;
+  transition: 0.2s all;
   transform: scale(0.8, 0.8);
 
   &::after {
@@ -36,7 +34,9 @@ const Lines = styled.div`
   margin-top: -0.125em;
   background-color: #333;
 
-  &, ::before, ::after {
+  &,
+  ::before,
+  ::after {
     pointer-events: none;
     display: block;
     content: '';
@@ -46,10 +46,11 @@ const Lines = styled.div`
     position: absolute;
     transform: rotate(0);
     background-color: #333;
-    transition: .2s top .2s, .1s left, .2s transform, .4s background-color .2s;
+    transition: 0.2s top 0.2s, 0.1s left, 0.2s transform, 0.4s background-color 0.2s;
   }
 
-  &::after, &::before {
+  &::after,
+  &::before {
     width: 2em;
   }
 
@@ -62,4 +63,4 @@ const Lines = styled.div`
     left: 1em;
     top: 1em;
   }
-`;
+`
