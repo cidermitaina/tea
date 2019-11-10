@@ -21,6 +21,7 @@
     "styled-reset": "^4.0.2",
     "typescript": "3.6.4"
   },
+  "homepage": "http://cidermitaina.github.io/tea",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -28,7 +29,9 @@
     "eject": "react-scripts eject",
     "lint:ts": "eslint 'src/**/*.ts{,x}'",
     "lint:style": "stylelint 'src/**/*.ts{,x}'",
-    "lint": "run-p lint:*"
+    "lint": "run-p lint:*",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,6 +50,7 @@
   },
   "devDependencies": {
     "eslint-plugin-prettier": "^3.1.1",
+    "gh-pages": "^2.1.1",
     "prettier": "^1.19.0",
     "stylelint": "^11.1.1",
     "stylelint-config-prettier": "^6.0.0",
