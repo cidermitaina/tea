@@ -40,10 +40,6 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: #333;
-    transition: 0.3s all;
-    &:hover{
-      opacity:.7;
-    }
   }
 
   #root {

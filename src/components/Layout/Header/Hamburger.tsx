@@ -1,9 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Hamburger: React.FC<{}> = () => {
+interface Props {
+  isShow: boolean
+  onClickHamburger: () => void
+}
+
+export const Hamburger: React.FC<Props> = ({ isShow, onClickHamburger }) => {
   return (
-    <MenuIcon className="burger burger-squeeze">
+    <MenuIcon className={isShow ? 'burger burger-squeeze open' : 'burger burger-squeeze'} onClick={onClickHamburger}>
       <Lines className="burger-lines"></Lines>
     </MenuIcon>
   )
@@ -17,6 +22,7 @@ const MenuIcon = styled.div`
   cursor: pointer;
   transition: 0.2s all;
   transform: scale(0.8, 0.8);
+  margin: 0 auto;
 
   &::after {
     content: '';
@@ -27,6 +33,31 @@ const MenuIcon = styled.div`
     top: -25%;
     left: -25%;
   }
+
+  &.open {
+    .burger-lines {
+      &,
+      &:after,
+      &:before {
+        transition: .2s background-color, .2s top, .2s left, .2s transform .15s;
+      }
+      & {
+        background-color: transparent;
+      }
+      &:before,
+      &:after {
+        left: 0.5em;
+        top: 0px;
+      }
+      &:before {
+        transform: rotate(-45deg);
+      }
+      &:after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
 `
 
 const Lines = styled.div`

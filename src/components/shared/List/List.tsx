@@ -35,6 +35,11 @@ const Wrapper = styled.ul`
   padding-top: ${space.xl};
   a {
     display: block;
+    transition: 0.3s all;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
   & > li {
     width: 50%;

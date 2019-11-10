@@ -9,16 +9,17 @@ interface Props {
 }
 
 export const Layout: React.FC<Props> = ({ children }) => {
-  const links = [
+  const menus = [
+    { name: 'Top', url: '/' },
     { name: 'about', url: '/about' },
     { name: 'Black Tea', url: '/blacktea' },
     { name: 'Green Tea', url: '/greentea' },
-    { name: 'Cafe', url: '/cafe' },
+    { name: 'Tea Cup', url: '/teacup' },
   ]
 
   return (
     <Wrapper>
-      <Header links={links} />
+      <Header menus={menus} />
       <Main>{children}</Main>
       <Footer></Footer>
     </Wrapper>
