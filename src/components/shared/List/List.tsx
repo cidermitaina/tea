@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 import { Tea } from '../../../types/application'
+import { Tag } from '../../shared/Tag'
 import { space, font } from '../../../themes/size'
 
 interface Props {
@@ -21,6 +22,7 @@ export const List: React.FC<Props> = ({ className = '', teas, lang = 'en' }) => 
               <Figcaption lang={lang}>{tea.name}</Figcaption>
             </figure>
           </a>
+          <Tag tags={tea.tags} />
         </li>
       ))}
     </Wrapper>
@@ -34,7 +36,7 @@ const Wrapper = styled.ul`
   a {
     display: block;
   }
-  li {
+  & > li {
     width: 50%;
     padding: ${space.xs};
     box-sizing: border-box;

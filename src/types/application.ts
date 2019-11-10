@@ -3,4 +3,5 @@ export interface Tea {
   href: string
   src: string
   alt: string
+  tags: string[]
 }
