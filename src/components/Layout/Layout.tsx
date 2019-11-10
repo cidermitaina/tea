@@ -11,10 +11,10 @@ interface Props {
 export const Layout: React.FC<Props> = ({ children }) => {
   const menus = [
     { name: 'Top', url: '/' },
-    { name: 'about', url: '/about' },
     { name: 'Black Tea', url: '/blacktea' },
     { name: 'Green Tea', url: '/greentea' },
     { name: 'Tea Cup', url: '/teacup' },
+    { name: 'Contact', url: '/contact' },
   ]
 
   return (

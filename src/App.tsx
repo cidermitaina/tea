@@ -7,6 +7,7 @@ import { Top } from './components/App/Top'
 import { GreenTea } from './components/App/GreenTea'
 import { BlackTea } from './components/App/BlackTea'
 import { TeaCup } from './components/App/TeaCup'
+import { Contact } from './components/App/Contact'
 
 import './App.css'
 
@@ -16,9 +17,10 @@ const App: React.FC<{}> = () => (
     <GlobalStyle />
     <Switch>
       <Route exact path="/" component={Top} />
-      <Route path="/GreenTea" component={GreenTea} />
-      <Route path="/BlackTea" component={BlackTea} />
-      <Route path="/TeaCup" component={TeaCup} />
+      <Route path="/greentea" component={GreenTea} />
+      <Route path="/blacktea" component={BlackTea} />
+      <Route path="/teacup" component={TeaCup} />
+      <Route path="/contact" component={Contact} />
       <Redirect to="/" />;
     </Switch>
   </>
