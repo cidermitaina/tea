@@ -26,8 +26,6 @@ export const Text: React.FC<Props> = ({ className = '', size = 's', lang = 'en',
 )
 
 const Wrapper = styled.p`
-  @import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic|Sawarabi+Mincho&display=swap');
-
   ${({ size = 's' }: Props) => css`
     font-size: ${fontSize[size]};
   `};

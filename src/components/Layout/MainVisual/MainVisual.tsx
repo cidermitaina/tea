@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 import { Heading } from '../../shared/Heading'
+import { mediaQuery } from '../../../themes/size'
 
 interface Props {
   bgColor: string
@@ -28,4 +29,8 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: ${mediaQuery.sp}px) {
+    width: 100%;
+  }
 `

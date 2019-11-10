@@ -1,13 +1,13 @@
-const SPACE_BASE = 0.8
+const SPACE_BASE = 8
 
 export const space = {
-  xxs: `${SPACE_BASE}rem`,
-  xs: `${SPACE_BASE * 2}rem`,
-  s: `${SPACE_BASE * 3}rem`,
-  m: `${SPACE_BASE * 4}rem`,
-  l: `${SPACE_BASE * 5}rem`,
-  xl: `${SPACE_BASE * 6}rem`,
-  xxl: `${SPACE_BASE * 7}rem`,
+  xxs: `${SPACE_BASE * 0.1}rem`,
+  xs: `${SPACE_BASE * 0.2}rem`,
+  s: `${SPACE_BASE * 0.3}rem`,
+  m: `${SPACE_BASE * 0.4}rem`,
+  l: `${SPACE_BASE * 0.5}rem`,
+  xl: `${SPACE_BASE * 0.6}rem`,
+  xxl: `${SPACE_BASE * 0.7}rem`,
 }
 
 export const font = {

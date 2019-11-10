@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { font } from '../../../themes/size'
+import { font, mediaQuery } from '../../../themes/size'
 
 export interface HeadingProps {
   children: React.ReactNode
@@ -26,6 +26,10 @@ const Wrapper = styled.h1`
     font-size: ${font.xl};
     font-weight: normal;
     font-family: 'Sawarabi Mincho', sans-serif;
+
+    @media screen and (max-width: ${mediaQuery.sp}px) {
+      font-size: ${font.l};
+    }
   }
   &.sectionTitle {
     font-size: ${font.xl};

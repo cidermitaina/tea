@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Heading } from '../../shared/Heading'
-import { space } from '../../../themes/size'
+import { space, mediaQuery } from '../../../themes/size'
 
 import { FaRegGrinAlt, FaGithubAlt, FaTwitter, FaInstagram, FaBookOpen, FaHeart } from 'react-icons/fa'
 
@@ -50,6 +50,10 @@ const Wrapper = styled.div`
   width: 50%;
   height: 100%;
   background-color: #f5efe0;
+
+  @media screen and (max-width: ${mediaQuery.sp}px) {
+    width: 100%;
+  }
 `
 
 const Contents = styled.div`
@@ -72,8 +76,10 @@ const List = styled.ul`
 const Link = styled.a`
   transition: 0.3s all;
 
-  &:hover {
-    opacity: 0.7;
+  @media screen and (min-width: ${mediaQuery.sp}px) {
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   > svg {
@@ -89,8 +95,10 @@ const Button = styled.button`
   background: none;
   padding: 0;
 
-  &:hover {
-    opacity: 0.7;
+  @media screen and (min-width: ${mediaQuery.sp}px) {
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &:focus {

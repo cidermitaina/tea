@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 import { Header } from './Header'
+import { mediaQuery } from '../../themes/size'
 
 interface Props {
   children?: React.ReactNode[]
@@ -35,6 +36,10 @@ const Main = styled.main`
   align-items: center;
   height: 100%;
   z-index: 0;
+
+  @media screen and (max-width: ${mediaQuery.sp}px) {
+    display: block;
+  }
 `
 
 const Footer = styled.footer``

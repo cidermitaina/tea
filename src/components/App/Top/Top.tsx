@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Layout } from '../../Layout'
 import { Heading } from '../../shared/Heading'
 import { Text } from '../../shared/Text'
-import { space } from '../../../themes/size'
+import { space, mediaQuery } from '../../../themes/size'
 import mv from '../../../images/ReadingSideDoodle.svg'
 
 export const Top: React.FC<{}> = () => {
@@ -35,15 +35,22 @@ const MainVisual = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: ${mediaQuery.sp}px) {
+    width: 100%;
+  }
 `
 
-const MainContents = styled.section`
+const MainContents = styled.div`
   width: 50%;
   height: 100%;
   color: #fff;
-  background-color: lightseagreen;
   background-color: tan;
   position: relative;
+
+  @media screen and (max-width: ${mediaQuery.sp}px) {
+    width: 100%;
+  }
 `
 
 const Contents = styled.section`
@@ -52,6 +59,10 @@ const Contents = styled.section`
   justify-content: center;
   height: 100%;
   flex-direction: column;
+
+  @media screen and (max-width: ${mediaQuery.sp}px) {
+    padding: 0 ${space.xs};
+  }
 `
 
 const HeadingText = styled(Text)`

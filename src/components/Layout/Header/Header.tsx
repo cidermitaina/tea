@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { Hamburger } from './Hamburger'
-import { space, font } from '../../../themes/size'
+import { space, font, mediaQuery } from '../../../themes/size'
 
 interface menus {
   name: string
@@ -64,13 +64,22 @@ const Wrapper = styled.header`
   transform: translateX(-50%);
   z-index: 1;
   text-align: center;
+
+  @media screen and (max-width: ${mediaQuery.sp}px) {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
 `
 
 const NavList = styled.ul`
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s;
-  padding-bottom: ${space.s};
+
+  @media screen and (max-width: ${mediaQuery.sp}px) {
+    background-color: #fff;
+  }
 
   &.open {
     /* TODO: JSで高さ取得、アニメーションの調節 */
@@ -80,7 +89,7 @@ const NavList = styled.ul`
 
   & > li {
     padding: 0 8px;
-    margin-top: ${space.s};
+    margin: ${space.m} 0;
   }
   & a {
     color: #333;
@@ -101,8 +110,10 @@ const NavList = styled.ul`
       transition: transform 0.3s;
     }
 
-    &:hover::after {
-      transform: scale(1, 1);
+    @media screen and (min-width: ${mediaQuery.sp}px) {
+      &:hover::after {
+        transform: scale(1, 1);
+      }
     }
   }
 `

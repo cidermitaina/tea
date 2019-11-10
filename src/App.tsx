@@ -28,6 +28,8 @@ const App: React.FC<{}> = () => (
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic|Sawarabi+Mincho&display=swap');
+
   html {
     height: 100%;
     font-family: 'Hind', sans-serif;

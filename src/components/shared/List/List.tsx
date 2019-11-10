@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 
 import { Tea } from '../../../types/application'
 import { Tag } from '../../shared/Tag'
-import { space, font } from '../../../themes/size'
+import { space, font, mediaQuery } from '../../../themes/size'
 
 interface Props {
   className?: string
@@ -33,19 +33,31 @@ const Wrapper = styled.ul`
   display: flex;
   flex-wrap: wrap;
   padding-top: ${space.xl};
+
+  @media screen and (max-width: ${mediaQuery.sp}px) {
+    display: block;
+  }
+
   a {
     display: block;
     transition: 0.3s all;
 
-    &:hover {
-      opacity: 0.7;
+    @media screen and (min-width: ${mediaQuery.sp}px) {
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
   & > li {
     width: 50%;
     padding: ${space.xs};
     box-sizing: border-box;
+
+    @media screen and (max-width: ${mediaQuery.sp}px) {
+      width: 100%;
+    }
   }
+
   img {
     width: 100%;
   }
@@ -60,8 +72,6 @@ const Figcaption = styled.figcaption`
   ${props =>
     props.lang === 'ja' &&
     css`
-      @import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic|Sawarabi+Mincho&display=swap');
-
       font-family: 'Sawarabi Mincho', sans-serif;
     `};
 `

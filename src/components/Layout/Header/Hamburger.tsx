@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { mediaQuery } from '../../../themes/size'
+
 interface Props {
   isShow: boolean
   onClickHamburger: () => void
@@ -23,6 +25,12 @@ const MenuIcon = styled.div`
   transition: 0.2s all;
   transform: scale(0.8, 0.8);
   margin: 0 auto;
+
+  @media screen and (max-width: ${mediaQuery.sp}px) {
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+  }
 
   &::after {
     content: '';

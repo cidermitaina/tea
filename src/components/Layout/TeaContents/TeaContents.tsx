@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Tea } from '../../../types/application'
 import { List } from '../../shared/List'
 import { Heading } from '../../shared/Heading'
-import { space } from '../../../themes/size'
+import { space, mediaQuery } from '../../../themes/size'
 
 interface Props {
   teas: Tea[]
@@ -29,9 +29,16 @@ const Wrapper = styled.div`
   height: 100%;
   background-color: #f5efe0;
   overflow-y: scroll;
+
+  @media screen and (max-width: ${mediaQuery.sp}px) {
+    width: 100%;
+    overflow-y: visible;
+    height: auto;
+  }
 `
 
 const Contents = styled.div`
   width: 85%;
-  margin: ${space.xl} auto 0;
+  padding: ${space.xl} 0;
+  margin: 0 auto;
 `
