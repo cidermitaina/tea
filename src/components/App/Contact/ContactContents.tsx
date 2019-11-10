@@ -30,7 +30,7 @@ export const ContactContents: React.FC<{}> = () => {
           {snsLinks.map((snsLink, index) => (
             <li key={index}>
               {snsLink.url ? (
-                <Link href={snsLink.url}>
+                <Link href={snsLink.url} target="_blank" rel="noopener noreferrer">
                   <snsLink.name />
                 </Link>
               ) : (
