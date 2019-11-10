@@ -10,7 +10,7 @@ export const TeaCup: React.FC<{}> = () => {
   return (
     <Layout>
       <MainVisual bgColor="#add8e6">Tea Cup</MainVisual>
-      <TeaContents teas={teaCup} />
+      <TeaContents teas={teaCup} heading="Tea Cup List" />
     </Layout>
   )
 }

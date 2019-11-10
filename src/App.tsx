@@ -9,8 +9,6 @@ import { BlackTea } from './components/App/BlackTea'
 import { TeaCup } from './components/App/TeaCup'
 import { Contact } from './components/App/Contact'
 
-import './App.css'
-
 const App: React.FC<{}> = () => (
   <>
     <Reset />

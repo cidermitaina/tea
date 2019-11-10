@@ -9,14 +9,15 @@ import { space, mediaQuery } from '../../../themes/size'
 interface Props {
   teas: Tea[]
   lang?: string
+  heading?: string
 }
 
-export const TeaContents: React.FC<Props> = ({ teas, lang }) => {
+export const TeaContents: React.FC<Props> = ({ teas, lang, heading = 'Tea List' }) => {
   return (
     <Wrapper>
       <Contents>
         <Heading tag="h2" className="blockTitle">
-          Tea List
+          {heading}
         </Heading>
         <List teas={teas} lang={lang} />
       </Contents>
