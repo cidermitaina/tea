@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/tea/static/js/main.05751380.chunk.js",
+    "main.js.map": "/tea/static/js/main.05751380.chunk.js.map",
+    "runtime-main.js": "/tea/static/js/runtime-main.2751e3a4.js",
+    "runtime-main.js.map": "/tea/static/js/runtime-main.2751e3a4.js.map",
+    "static/js/2.ad341df5.chunk.js": "/tea/static/js/2.ad341df5.chunk.js",
+    "static/js/2.ad341df5.chunk.js.map": "/tea/static/js/2.ad341df5.chunk.js.map",
+    "index.html": "/tea/index.html",
+    "precache-manifest.5def9d5c5590f33212f2b891a9361f71.js": "/tea/precache-manifest.5def9d5c5590f33212f2b891a9361f71.js",
+    "service-worker.js": "/tea/service-worker.js",
+    "static/media/ReadingSideDoodle.svg": "/tea/static/media/ReadingSideDoodle.cc5e7586.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2751e3a4.js",
+    "static/js/2.ad341df5.chunk.js",
+    "static/js/main.05751380.chunk.js"
+  ]
+}
