@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "74f674c702db7abdc8914c401130484f",
+    "revision": "d53dfbd9b4728eafc84b977c1d5d9dbf",
     "url": "/tea/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tea/static/js/2.7133b083.chunk.js"
   },
   {
-    "revision": "a6cbca3f9717b0ed2267",
-    "url": "/tea/static/js/main.72e5b8ea.chunk.js"
+    "revision": "aec3af9092660e7a5388",
+    "url": "/tea/static/js/main.19a175b0.chunk.js"
   },
   {
     "revision": "ec385e8679e0b7f4ec2d",
