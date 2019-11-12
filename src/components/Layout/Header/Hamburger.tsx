@@ -10,8 +10,8 @@ interface Props {
 
 export const Hamburger: React.FC<Props> = ({ isShow, onClickHamburger }) => {
   return (
-    <MenuIcon className={isShow ? 'burger burger-squeeze open' : 'burger burger-squeeze'} onClick={onClickHamburger}>
-      <Lines className="burger-lines"></Lines>
+    <MenuIcon className={isShow ? 'open' : ''} onClick={onClickHamburger}>
+      <Lines />
     </MenuIcon>
   )
 }
@@ -41,31 +41,27 @@ const MenuIcon = styled.div`
     top: -25%;
     left: -25%;
   }
-
   &.open {
-    .burger-lines {
+    & > div {
+      background-color: transparent;
       &,
-      &:after,
-      &:before {
-        transition: .2s background-color, .2s top, .2s left, .2s transform .15s;
+      &::after,
+      &::before {
+        transition: 0.2s background-color, 0.2s top, 0.2s left, 0.2s transform 0.15s;
       }
-      & {
-        background-color: transparent;
-      }
-      &:before,
-      &:after {
+      &::before,
+      &::after {
         left: 0.5em;
-        top: 0px;
+        top: 0;
       }
-      &:before {
+      &::before {
         transform: rotate(-45deg);
       }
-      &:after {
+      &::after {
         transform: rotate(45deg);
       }
     }
   }
-}
 `
 
 const Lines = styled.div`
