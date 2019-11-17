@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -18,37 +18,24 @@ export interface State {
   isShow: boolean
 }
 
-export class Header extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
+export const Header: React.FC<Props> = ({ menus }) => {
+  const [isShow, setIsShow] = useState(false)
+  const onClickHamburger = () => setIsShow(!isShow)
 
-    this.state = {
-      isShow: false,
-    }
-  }
-  public render() {
-    const { isShow } = this.state
-    const { menus } = this.props
-
-    return (
-      <Wrapper>
-        <nav>
-          <Hamburger isShow={isShow} onClickHamburger={this.onClickHamburger} />
-          <NavList className={isShow ? 'open' : ''}>
-            {menus.map(menu => (
-              <li key={menu.name}>
-                <Link to={menu.url}>{menu.name}</Link>
-              </li>
-            ))}
-          </NavList>
-        </nav>
-      </Wrapper>
-    )
-  }
-
-  private onClickHamburger = () => {
-    this.setState({ isShow: !this.state.isShow })
-  }
+  return (
+    <Wrapper>
+      <nav>
+        <Hamburger isShow={isShow} onClickHamburger={onClickHamburger} />
+        <NavList className={isShow ? 'open' : ''}>
+          {menus.map(menu => (
+            <li key={menu.name}>
+              <Link to={menu.url}>{menu.name}</Link>
+            </li>
+          ))}
+        </NavList>
+      </nav>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.header`
