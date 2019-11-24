@@ -18,7 +18,7 @@ export const List: React.FC<Props> = ({ className = '', teas, lang = 'en' }) => 
         <li key={tea.name}>
           <a href={tea.href} target="_blank" rel="noopener noreferrer">
             <figure>
-              <img src={tea.src} alt={tea.alt} />
+              <img src={require(`../../../images/teas/${tea.src}`)} alt={tea.alt} />
               <Figcaption lang={lang}>{tea.name}</Figcaption>
             </figure>
           </a>
