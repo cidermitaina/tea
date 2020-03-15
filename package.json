@@ -19,7 +19,7 @@
     "react-scripts": "3.2.0",
     "styled-components": "^4.4.0",
     "styled-reset": "^4.0.2",
-    "typescript": "3.6.4"
+    "typescript": "3.8.3"
   },
   "homepage": "http://cidermitaina.github.io/tea",
   "scripts": {
