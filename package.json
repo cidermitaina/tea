@@ -18,7 +18,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "styled-components": "^4.4.0",
-    "styled-reset": "^4.0.2",
+    "styled-reset": "^4.1.4",
     "typescript": "3.8.3"
   },
   "homepage": "http://cidermitaina.github.io/tea",
